@@ -9,6 +9,11 @@ REMOTE_FOLDER = "/Watch/"
 class Synchronize
   def self.start(options, arguments)
 
+
+    #arguments
+    puts options
+
+
     # Password
     puts "Password:"
     password = STDIN.noecho(&:gets).chomp
