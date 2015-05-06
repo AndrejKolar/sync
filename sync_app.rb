@@ -6,9 +6,8 @@ ACCOUNT = "admin"
 LOCAL_FOLDER = "/Users/andrejkolar/Downloads/"
 REMOTE_FOLDER = "/Watch/"
 
-
 class Synchronize
-  def self.start
+  def self.start(options, arguments)
 
     # Password
     puts "Password:"
