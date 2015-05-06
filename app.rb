@@ -8,6 +8,10 @@ require 'escort'
 require './synchronize'
 
 Escort::App.create do |app|
+  app.version "1.0.0"
+  app.summary "Sync"
+  app.description "Fast folder sync via ftp"
+  app.config_file ".sync_config", :autocreate => true
 
   app.options do |opts|
     opts.opt :server, "server", :short => '-s', :long => '--server', :type => :string, :default => "andrejkolar.synology.me"
