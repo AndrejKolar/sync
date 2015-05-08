@@ -1,37 +1,36 @@
 require 'net/ftp'
 require 'io/console'
 
-SERVER = "andrejkolar.synology.me"
-ACCOUNT = "admin"
-LOCAL_FOLDER = "/Users/andrejkolar/Downloads/"
-REMOTE_FOLDER = "/Watch/"
-
 class Synchronize
   def self.start(options, arguments)
 
-
     #arguments
-    puts options
+    # puts options
 
+    global_options = options[:global][:options]
+    server = global_options[:server]
+    account = global_options[:account]
+    local_folder = global_options[:local_folder]
+    remote_folder = global_options[:remote_folder]
 
     # Password
     puts "Password:"
     password = STDIN.noecho(&:gets).chomp
 
-    Net::FTP.open(SERVER, ACCOUNT, password) do |ftp|
-      ftp.chdir(REMOTE_FOLDER)
+    Net::FTP.open(server, account, password) do |ftp|
+      ftp.chdir(remote_folder)
       files = ftp.list
 
-      Dir.foreach(LOCAL_FOLDER) do |file|
+      Dir.foreach(local_folder) do |file|
         next if file.start_with?('.')
         next unless file.end_with?('.torrent')
 
         # Upload
         p "Uploading file " + file.to_s
-        ftp.putbinaryfile(LOCAL_FOLDER + file)
+        ftp.putbinaryfile(local_folder + file)
 
         # Delete
-        filePath = File.join(LOCAL_FOLDER, file)
+        filePath = File.join(local_folder, file)
         File.delete(filePath)
       end
     end
