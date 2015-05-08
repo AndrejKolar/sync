@@ -4,14 +4,13 @@ require 'io/console'
 class Synchronize
   def self.start(options, arguments)
 
-    #arguments
-    # puts options
-
+    #Read options
     global_options = options[:global][:options]
     server = global_options[:server]
     account = global_options[:account]
     local_folder = global_options[:local_folder]
     remote_folder = global_options[:remote_folder]
+    extension = global_options[:extension]
 
     # Password
     puts "Password:"
@@ -23,7 +22,7 @@ class Synchronize
 
       Dir.foreach(local_folder) do |file|
         next if file.start_with?('.')
-        next unless file.end_with?('.torrent')
+        next unless file.end_with?(extension)
 
         # Upload
         p "Uploading file " + file.to_s
