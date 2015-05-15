@@ -4,7 +4,7 @@ require 'io/console'
 class Synchronize
   def self.start(options, arguments)
 
-    #Read options
+    #Options
     global_options = options[:global][:options]
     server = global_options[:server]
     account = global_options[:account]
@@ -25,7 +25,7 @@ class Synchronize
         next unless file.end_with?(extension)
 
         # Upload
-        p "Uploading file " + file.to_s
+        puts "Uploading file " + file.to_s
         ftp.putbinaryfile(local_folder + file)
 
         # Delete
