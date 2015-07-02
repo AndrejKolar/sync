@@ -26,7 +26,7 @@ Format for the conf file is JSON. An example configuration:
 {
   "global": {
     "options": {
-      "server": "andrejkolar.synology.me",
+      "server": "example.dynamic.dns",
       "account": "admin",
       "local_folder": "/Users/andrejkolar/Downloads/",
       "remote_folder": "/Watch/",
