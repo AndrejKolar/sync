@@ -10,7 +10,7 @@ require './synchronize'
 Escort::App.create do |app|
   app.version "1.0.0"
   app.summary "Sync"
-  app.description "Fast folder sync via ftp"
+  app.description "Fast folder sync via ftp from the command line"
   app.config_file ".sync_config", :autocreate => true
 
   app.options do |opts|

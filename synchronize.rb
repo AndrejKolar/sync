@@ -1,6 +1,8 @@
 require 'net/ftp'
 require 'io/console'
 
+require 'highline/import'
+
 class Synchronize
   def self.start(options, arguments)
 
@@ -39,8 +41,7 @@ class Synchronize
     end
 
     # Password
-    puts "Password:"
-    password = STDIN.noecho(&:gets).chomp
+    password = ask("Password: ") { |q| q.echo="*"}
 
     Net::FTP.open(server, account, password) do |ftp|
       ftp.chdir(remote_folder)
