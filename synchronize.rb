@@ -12,6 +12,32 @@ class Synchronize
     remote_folder = global_options[:remote_folder]
     extension = global_options[:extension]
 
+    # Check values
+    if server == "CHANGE_DEFAULT"
+      puts "FTP Server should be passed as an option (-s) or specified in the config file (~/.sync_config)"
+      return
+    end
+
+    if account == "CHANGE_DEFAULT"
+      puts "FTP account name should be passed as an option (-a) or specified in the config file (~/.sync_config)"
+      return
+    end
+
+    if local_folder == "CHANGE_DEFAULT"
+      puts "Local folder should be passed as an option (-l) or specified in the config file (~/.sync_config)"
+      return
+    end
+
+    if remote_folder == "CHANGE_DEFAULT"
+      puts "Remote folder on the ftp server should be passed as an option (-r) or specified in the config file (~/.sync_config)"
+      return
+    end
+
+    if extension == "CHANGE_DEFAULT"
+      puts "File extension should be passed as an option (-e) or specified in the config file (~/.sync_config)"
+      return
+    end
+
     # Password
     puts "Password:"
     password = STDIN.noecho(&:gets).chomp
@@ -36,6 +62,3 @@ class Synchronize
 
   end
 end
-
-
-
