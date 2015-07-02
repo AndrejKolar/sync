@@ -53,6 +53,13 @@ Format for the conf file is JSON. An example configuration:
 }
 ```
 
+## run
+Enter
+```bash
+ ./app.rb
+``` 
+Input the ftp password in the prompt
+
 ## gems
 [Escort](https://github.com/skorks/escort) gem is used to create the CLI for the app. 
 
