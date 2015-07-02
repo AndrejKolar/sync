@@ -3,6 +3,8 @@ Fast folder sync via ftp
 
 Command line app for synching a local folder with a remote via ftp. Only files with a specified extension get synched. Files are deleted after they are uploaded. A good use example would be synching .torrent files from the local ~/Downloads/ folder with a watch folder on a torrent box.
 
+![image](https://cloud.githubusercontent.com/assets/1213228/8479609/37301d18-20d9-11e5-89e2-f90384fb33d3.png)
+
 ## installation
 App uses Bundler to handle dependancies.
 
