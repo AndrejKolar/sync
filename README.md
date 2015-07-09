@@ -63,4 +63,5 @@ Input the ftp password in the prompt
 
 ## gems
 [Escort](https://github.com/skorks/escort) gem is used to create the CLI for the app.
+
 [Highline](https://github.com/JEG2/highline) gem is used for password input.
