@@ -6,7 +6,7 @@ require 'highline/import'
 class Synchronize
   def self.start(options, arguments)
 
-    #Options
+    # Options
     global_options = options[:global][:options]
     server = global_options[:server]
     account = global_options[:account]
