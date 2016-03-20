@@ -65,4 +65,5 @@ Input the ftp password in the prompt
 [Escort](https://github.com/skorks/escort) gem is used to create the CLI for the app.
 
 [Highline](https://github.com/JEG2/highline) gem is used for password input.
+
 [net-sftp](https://github.com/net-ssh/net-sftp) gem is used to upload files via sftp.
