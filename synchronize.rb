@@ -1,6 +1,5 @@
 require 'net/sftp'
 require 'io/console'
-
 require 'highline/import'
 
 class Synchronize
