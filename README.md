@@ -19,7 +19,7 @@ Run in the app folder
 ```
 
 ## configuration
-First time the app is run it will create a config file in the home folder of the user (~/.sync_config). Default values need to be changed in the conf file in order for the app to work. Server name, ftp account name, paths to the local folder and the folder on the server and the extension of the files need to be specified. Values can be passed as command parameters but its convenient to use the conf file for the default setup.
+First time the app is run it will create a config file in the home folder of the user (~/.sync_config). Default values need to be changed in the conf file in order for the app to work. Server name, sftp account name, paths to the local folder and the folder on the server and the extension of the files need to be specified. Values can be passed as command parameters but its convenient to use the conf file for the default setup.
 
 Format for the conf file is JSON. An example configuration:
 
@@ -59,7 +59,7 @@ Enter
 ```bash
  ./app.rb
 ```
-Input the ftp password in the prompt
+Input the sftp password in the prompt
 
 ## gems
 [Escort](https://github.com/skorks/escort) gem is used to create the CLI for the app.
