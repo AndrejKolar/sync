@@ -5,6 +5,9 @@ GEM
       nesty
     highline (1.7.2)
     nesty (1.0.2)
+    net-sftp (2.1.2)
+      net-ssh (>= 2.6.5)
+    net-ssh (3.1.0)
 
 PLATFORMS
   ruby
@@ -12,3 +15,7 @@ PLATFORMS
 DEPENDENCIES
   escort
   highline
+  net-sftp
+
+BUNDLED WITH
+   1.10.6

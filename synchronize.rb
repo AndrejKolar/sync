@@ -1,4 +1,4 @@
-require 'net/ftp'
+require 'net/sftp'
 require 'io/console'
 
 require 'highline/import'
@@ -43,9 +43,7 @@ class Synchronize
     # Password
     password = ask("Password: ") { |q| q.echo="*"}
 
-    Net::FTP.open(server, account, password) do |ftp|
-      ftp.chdir(remote_folder)
-      files = ftp.list
+    Net::SFTP.start(server, account, :password => password) do |sftp|
 
       Dir.foreach(local_folder) do |file|
         next if file.start_with?('.')
@@ -53,7 +51,7 @@ class Synchronize
 
         # Upload
         puts "Uploading file " + file.to_s
-        ftp.putbinaryfile(local_folder + file)
+        sftp.upload!(local_folder + file, remote_folder + file)
 
         # Delete
         filePath = File.join(local_folder, file)
