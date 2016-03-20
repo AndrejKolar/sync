@@ -3,6 +3,8 @@ Fast folder sync via sftp
 
 Command line app for synching a local folder with a remote via sftp. Only files with a specified extension get synched. Files are deleted after they are uploaded. A good use example would be synching .torrent files from the local ~/Downloads/ folder with a watch folder on a torrent box.
 
+![image](https://cloud.githubusercontent.com/assets/1213228/8479609/37301d18-20d9-11e5-89e2-f90384fb33d3.png)
+
 ## installation
 App uses Bundler to handle dependancies.
 
@@ -61,5 +63,6 @@ Input the ftp password in the prompt
 
 ## gems
 [Escort](https://github.com/skorks/escort) gem is used to create the CLI for the app.
+
 [Highline](https://github.com/JEG2/highline) gem is used for password input.
 [net-sftp](https://github.com/net-ssh/net-sftp) gem is used to upload files via sftp.
