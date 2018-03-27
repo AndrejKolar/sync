@@ -3,7 +3,6 @@ GEM
   specs:
     escort (0.4.0)
       nesty
-    highline (1.7.2)
     nesty (1.0.2)
     net-sftp (2.1.2)
       net-ssh (>= 2.6.5)
@@ -14,8 +13,7 @@ PLATFORMS
 
 DEPENDENCIES
   escort
-  highline
   net-sftp
 
 BUNDLED WITH
-   1.10.6
+   1.16.0

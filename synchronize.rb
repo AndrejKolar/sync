@@ -1,6 +1,5 @@
 require 'net/sftp'
 require 'io/console'
-require 'highline/import'
 
 class Synchronize
   def self.start(options, arguments)
@@ -40,7 +39,8 @@ class Synchronize
     end
 
     # Password
-    password = ask("Password: ") { |q| q.echo="*"}
+    print("Password: ")
+    password = STDIN.noecho(&:gets).chomp
 
     Net::SFTP.start(server, account, :password => password) do |sftp|
 
