@@ -42,6 +42,8 @@ class Synchronize
     print("Password: ")
     password = STDIN.noecho(&:gets).chomp
 
+    print("\n")
+
     Net::SFTP.start(server, account, :password => password) do |sftp|
 
       Dir.foreach(local_folder) do |file|
